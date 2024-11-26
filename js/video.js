@@ -43,7 +43,8 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 /*skip ahead*/
 document.querySelector("#skip").addEventListener("click", function() {
-	if (video.currentTime += 10 > video.duration) {
+	video.currentTime += 10;
+	if (video.currentTime > video.duration) {
 		video.currentTime = 0;
 		console.log("Video Current Time is " + video.currentTime);
 		}
